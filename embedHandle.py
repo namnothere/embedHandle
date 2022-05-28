@@ -14,7 +14,7 @@ BASE_URL = os.getenv("BASE_URL")
 def oEmbedGen(description, video_link):
 	out = {
 		"provider_name" : "nem",
-		"provider_url"  : "https://github.com/youtu.be/dQw4w9WgXcQ",
+		"provider_url"  : "https://youtu.be/dQw4w9WgXcQ",
 		# "title"         : description,
 		"author_name"   : description,
 		"author_url"    : video_link
