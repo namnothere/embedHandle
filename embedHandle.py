@@ -45,7 +45,7 @@ def renderEmbed(username, videoID):
 	height = video['height']
 	appname = "NoBaePleaseDontUseTikTok"
 	video_url = video['video_url']
-	orLink = f"{TIKTOK_URL}{username}/{videoID}"
+	orLink = f"{TIKTOK_URL}{username}/video/{videoID}"
 	url = oEmbedURLrender(desc, video_url)
 	return render_template('index.html', cover = cover, Id = Id, nickname = nickName, desc = desc, width = width, height = height, video_url = video_url, appname = appname, embed=url, orLink = orLink)
 
