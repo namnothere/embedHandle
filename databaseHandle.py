@@ -22,7 +22,11 @@ class Database():
                 time.sleep(10)
                 return self.connectDB()
 
-    def getVideo(self, id):
+    def getVideo(self, username, id):
         self.connectDB()
         db = self.client.TikTok.bae.find_one({'id':'tiktok'})
-        return db['videos'][str(id)]
+        try:
+            return db['videos'][str(username)][str(id)]
+        except Exception as e:
+            print("getVideo [Error]: " + str(e))
+            return None
